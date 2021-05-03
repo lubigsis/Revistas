@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;/*p/q las cajas no se desborden unas con otras*/
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background:pink;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body{
+    background: #f21170;
+}
+
+header{
+    background: #999b84;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header .logo{
+    color: #f8f5f1;
+    font-size: 19px;
+}
+
+header .logo img{
+    width: 50px;
+    vertical-align: top;
+
+}
+
+header nav{
+    width: 27%;
+   display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+header nav a{
+    background: #8ab6d6;
+    color: #ffe268;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+footer{
+    background: #2b2e4a;
+    color: #9ede73;
+    width: 100%;
+    padding: 20px;
+}
+
+
+/**********************************************************/
+
+
+
+
+/***********************************************FILTRO*********************/
+
+#español:checked ~ #imagenes .ingles,
+#español:checked ~ #imagenes .frances{
+    display: none;
+}
+
+#ingles:checked ~ #imagenes .español,
+#ingles:checked ~ #imagenes .frances{
+    display: none;
+}
+
+#frances:checked ~ #imagenes .ingles,
+#frances:checked ~ #imagenes .español{
+    display: none;
+}
