@@ -4,19 +4,11 @@
     box-sizing: border-box;/*p/q las cajas no se desborden unas con otras*/
 }
 
-.contenedor{
-    width: 100%;
-    max-width: 1000px;
-    margin: auto;
-    background:pink;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 body{
-    background: #f21170;
+    background: #efefef;
+    height: 100vh;             /*revisar*/
+    font-family: sans-serif;
+    letter-spacing: 0.02em;
 }
 
 header{
@@ -57,32 +49,121 @@ header nav a{
     flex-grow: 1;
 }
 
-footer{
-    background: #2b2e4a;
-    color: #9ede73;
+/**********************************************MAIN************************/
+.contenedor-selectores-img{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor-revistas{
     width: 100%;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contenedor-img{
+    width: 100%;
+}
+
+.contenedor-img img{  /*la img se ajusta al tamaño de su padre, es decir, 'revista'*/
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    cursor: pointer;
 }
 
 
-/**********************************************************/
+.revista{
+    width: 240px;
+    height: 400px;
+    margin: 30px 5px 2px 5px;
+    padding: 4px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 20px 2px black 0.8; /****************mejorar la sombra*/
+    overflow: hidden;
+    
+}
 
 
+.revista h2{
+    color: #aaa;
+    margin-top: 5px;
+    font-size: 16px;
 
+}
+
+.fecha-inicio{
+    color: #ccc;
+    margin-top: 2px;
+    font-size: 14px;    
+}
+
+
+.revista p{
+    line-height: 17px;
+    color: #808080;
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.revista a{
+    text-decoration: none;
+    color: #fff;
+    background: rgb(27, 27, 27);
+    padding: 4px;
+    display: inline-block;
+    width: 200px;
+    border-radius: 3px;
+    font-size: 15px;
+    transition: all 0.2s;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.revista a:hover{
+    background: rgb(177, 56, 56);
+}
+
+.redes{
+    margin: 10px 10px 0 10px;
+}
+ 
+/******************************************************************************/
+.cont-footer{
+    background: #2b2e4a;
+    color: #9ede73;
+    width: 95%;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/*******************************SELECTORES***************************/
+
+input[type="radio"]{  /*que no sean visibles los type radio y sólo queden las etiquetas*/
+    display: none;
+}
+
+label{
+    margin: 0px 10px;
+    cursor: pointer;
+}
 
 /***********************************************FILTRO*********************/
 
-#español:checked ~ #imagenes .ingles,
-#español:checked ~ #imagenes .frances{
+#español:checked ~ .contenedor-revistas .ingles,
+#español:checked ~ .contenedor-revistas .frances{
     display: none;
 }
 
-#ingles:checked ~ #imagenes .español,
-#ingles:checked ~ #imagenes .frances{
+#ingles:checked ~ .contenedor-revistas .español,
+#ingles:checked ~ .contenedor-revistas .frances{
     display: none;
 }
 
-#frances:checked ~ #imagenes .ingles,
-#frances:checked ~ #imagenes .español{
+#frances:checked ~ .contenedor-revistas .ingles,
+#frances:checked ~ .contenedor-revistas .español{
     display: none;
 }
