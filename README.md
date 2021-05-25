@@ -21,3 +21,17 @@ Estuve agregando el contenedor de cada revista, acomodando las respectivas image
 .Estilos a los selectores
 
 ............................................................................................................................................
+
+25/05/2021:
+
+. Coloqué google fonts, cambié colores, centré contenido, edité footer, di estilos a los selectores, puse sombra a las revistas y animación para que al pasar el mouse, no tenga un efecto tan brusco.
+
+Falta:
+
+.Responsive design.
+. Info. real.
+. Vincular licencia CC.
+. Explicar el código.
+
+..........................................................................
+

@@ -20,33 +20,48 @@ header{
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    font-family: 'Patrick Hand', cursive;
 }
 
 header .logo{
     color: #f8f5f1;
-    font-size: 19px;
+    font-size: 23px;
+    letter-spacing: 0.2em;
 }
 
+/*
 header .logo img{
     width: 50px;
     vertical-align: top;
 
 }
+*/
 
 header nav{
-    width: 27%;
+    width: 26%;
    display: flex;
     flex-wrap: wrap;
     align-items: center;
+    
 }
 
 header nav a{
-    background: #8ab6d6;
+    background: #8a8c73;
     color: #ffe268;
     text-align: center;
     text-decoration: none;
-    padding: 10px;
+    padding: 7px;
     flex-grow: 1;
+    font-size: 19px;
+    letter-spacing: 0.03em;
+    border-radius: 4%;
+    
+
+}
+
+header nav a:hover{
+    background:  #7c7e67;
+    color: #fff;
 }
 
 /**********************************************MAIN************************/
@@ -58,7 +73,7 @@ header nav a{
 .contenedor-revistas{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -75,20 +90,33 @@ header nav a{
 
 
 .revista{
-    width: 240px;
+    width: 290px;
     height: 400px;
-    margin: 30px 5px 2px 5px;
-    padding: 4px;
+    margin: 30px 10px 2px 0px;
+    padding: 5px;
     background: #fff;
     text-align: center;
     box-shadow: 0 0 20px 2px black 0.8; /****************mejorar la sombra*/
     overflow: hidden;
+    transition: all 0.5s ease;
     
+}
+
+.revista:hover{
+ transform: scale(0.98);
+ border: 1px solid  #ffeb99;
+ background:  #f3f4f1;
+ box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  
+}
+
+.revista img:hover{
+    border: 1px solid #ffeb99;
 }
 
 
 .revista h2{
-    color: #aaa;
+    color: #666666;
     margin-top: 5px;
     font-size: 16px;
 
@@ -111,33 +139,60 @@ header nav a{
 .revista a{
     text-decoration: none;
     color: #fff;
-    background: rgb(27, 27, 27);
+    background: #737373;
     padding: 4px;
     display: inline-block;
     width: 200px;
     border-radius: 3px;
     font-size: 15px;
     transition: all 0.2s;
-    margin-top: 10px;
+    margin-top: 6px;
     cursor: pointer;
+    transition: 1s;
 }
 
 
 .revista a:hover{
-    background: rgb(177, 56, 56);
+    background:  #ffeb99;
+    border: 0.5px solid  #ffd633;
+    color: #333333;
+    
 }
 
 .redes{
     margin: 10px 10px 0 10px;
 }
  
+
+
+
 /******************************************************************************/
+
 .cont-footer{
-    background: #2b2e4a;
-    color: #9ede73;
-    width: 95%;
-    padding: 20px;
-    margin-top: 40px;
+    width: 100%;
+    height: 30px;
+    padding: 12px 5px 40px 5px;
+    background: #292a22;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 70px 0 5px 0;
+}
+
+
+.cont-footer a{
+    color: #ffe268;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    
+    
+}
+
+.cont-footer a:hover{
+    background:  #7c7e67;
+    color: #1c1c17;
 }
 
 /*******************************SELECTORES***************************/
@@ -147,9 +202,26 @@ input[type="radio"]{  /*que no sean visibles los type radio y sólo queden las e
 }
 
 label{
-    margin: 0px 10px;
-    cursor: pointer;
+   border-radius: 4%;
+   cursor: pointer;
+   display: inline-block;
+   width: 90px;
+   height: 35px;
+   margin: 15px 2px;
+   text-align: center;
+   font-size: 18px;
+   padding: 5px;
+   color: #6f705c;
+   font-family: 'Patrick Hand', cursive;
+   
 }
+
+label:hover{
+    color: #000;
+    background: #ebebe0;
+}
+
+
 
 /***********************************************FILTRO*********************/
 
@@ -167,3 +239,5 @@ label{
 #frances:checked ~ .contenedor-revistas .español{
     display: none;
 }
+
+
